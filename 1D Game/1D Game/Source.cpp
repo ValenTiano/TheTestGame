@@ -1,35 +1,40 @@
 #include <iostream>
 #include <random>
 #include <ctime>
+#include <string>
 
 using namespace std;
 
-void main()
+int main()
 {
+    //random generators
     mt19937 randomGenerator(time(0));
     uniform_real_distribution<float> RandomModifier(-10.0f, 10.0f);
     uniform_real_distribution<float> ZombieDamageModifier(-5.0f, 10.0f);
+
     bool isBattle = true;
     bool nextHuman = true;
     bool nextZombie = true;
 
+    //human vars
     int humanCount;
-    int zombieCount;
-
     float humanDefaultHealth = 100.0f;
-    float zombieDefaultHealth = 20.0f;
-
     float humanHealth;
-    float zombieHealth;
-
     float humanDamage = 10.0f;
+
+    //zombie vars
+    int zombieCount;
+    float zombieDefaultHealth = 20.0f;
+    float zombieHealth;    
     float zombieDamage = 5.0f;
+
 
     cout << "Enter Humans Count:";
     cin >> humanCount;
     cout << "Enter Zombies Count:";
     cin >> zombieCount;
 
+    //battle simulation
     float zombieModifier;
     float humanModifier;
     while (isBattle) {
@@ -100,4 +105,5 @@ void main()
     }
 
     system("PAUSE");
+    return 0;
 }
