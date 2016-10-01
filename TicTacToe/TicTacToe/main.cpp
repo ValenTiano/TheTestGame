@@ -1,23 +1,13 @@
 #include <iostream>
-#include "Board.h"
+#include "GameMaster.h"
 
 using namespace std;
 
 int main()
 {
     cout << "------<<<<< Welcome to TicTacToe Game >>>>>------" << endl;
-    //create playing field
-    Board board;
-    board.PrintBoard();
-    //ask for input player 1
-
-    //draw X
-
-    //ask for input player 2
-
-    //draw 0
-
-
+    GameMaster Game1;
+    Game1.StartGame();
 
     system("PAUSE");
     return 0;

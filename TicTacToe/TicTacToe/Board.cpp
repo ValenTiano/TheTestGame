@@ -10,12 +10,15 @@ Board::Board() {
 void Board::NewBoard() {
     for (int x = 0; x < SIZE; x++) {
         for (int y = 0; y < SIZE; y++) {
-            _board[x][y] = " ";
+            _board[x][y] = ' ';
         }
     }
 }
 
-void Board::PrintBoard() {
+char Board::getSymbol(int x, int y) {
+    return _board[x][y];
+}
+void Board::Print() {
     for (int x = 0; x < SIZE; x++) {
         for (int y = 0; y < SIZE; y++) {
             cout << _board[x][y];
@@ -31,4 +34,8 @@ void Board::PrintBoard() {
             cout << "-\n";
         }
     }
+}
+
+void Board::PlaceSymbol(int x, int y, char symbol) {
+    _board[x-1][y-1] = symbol;
 }
