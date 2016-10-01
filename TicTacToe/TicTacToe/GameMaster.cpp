@@ -38,7 +38,7 @@ void GameMaster::_CheckWinner() {
     int numOfSymbolsHori = 0;
     for (int x = 0; x < _board.SIZE; x++) {
         symbolHori = _board.getSymbol(x, 0);
-        symbolVert = _board.getSymbol(0, y);
+        symbolVert = _board.getSymbol(0, x);
         if (symbolHori != _board.emptyCell && symbolVert != _board.emptyCell) {
             numOfSymbolsHori = 1;
             numOfSymbolsVert = 1;
